@@ -1,0 +1,48 @@
+body {
+    background-color:black !important; /* Color de fondo gris claro */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffc107 !important;  /* Amarillo Bootstrap */
+    transition: 0.3s;
+  }
+  
+.contenido{
+  justify-content: center;
+  
+}
+
+.titulo{
+font-size: 70px !important;
+justify-content: center;
+    }
+
+.eslogan{
+  font-size: 40px;
+}
+
+ .botones{
+  justify-content: center !important;
+  display: flex;
+  
+ }
+
+footer{
+  border-radius: .5rem;
+}
+
+ @media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 50px !important;
+    }
+
+    .eslogan{
+        font-size: 25px;
+    }
+  
+    .card-body{
+        
+        border-radius: 1rem;
+    }
+}
