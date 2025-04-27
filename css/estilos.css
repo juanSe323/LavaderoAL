@@ -28,6 +28,24 @@ justify-content: center;
   
  }
 
+.botonServis{
+  justify-content: center !important;
+  display: flex  !important;
+}
+
+.botones-servicio {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tarjeta {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
 footer{
   border-radius: .5rem;
 }
