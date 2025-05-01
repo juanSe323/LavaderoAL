@@ -79,7 +79,7 @@
         
         <!-- Campo oculto que se enviará por FormSubmit -->
         <input type="hidden" name="servicio" id="campoServicioSeleccionado">
-
+        <input type="hidden" name="_next" value="https://juanse323.github.io/LavaderoAL/html/servicios.html">
         <div class="mb-3">
           <label for="nombreUsuario" class="form-label">Tu nombre</label>
           <input type="text" class="form-control" id="nombreUsuario" name="nombre" required>
@@ -88,8 +88,6 @@
           <label for="fechaDeseada" class="form-label">Fecha deseada</label>
           <input type="date" class="form-control" id="fechaDeseada" name="fecha" required>
         </div>
-
-        <!-- NUEVO: Detalles extra -->
         <div class="mb-3">
           <label for="detallesExtra" class="form-label">Detalles adicionales (opcional)</label>
           <textarea class="form-control" id="detallesExtra" name="detalles" rows="2" placeholder="Ej: 2 motos, incluye baúl, etc."></textarea>

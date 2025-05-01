@@ -8,15 +8,15 @@ function mostrarServicios(tipo) {
   
     if (tipo === 'carro') {
       servicios = [
-        { titulo: 'Enjuague Rápido', descripcion: 'Lavado exterior ligero y secado rápido.', precio: '$5000', imagen: '../img/lavadoautos.jpeg' },
-        { titulo: 'Lavado Normal', descripcion: 'Exterior completo, llantas, vidrios y aspirado básico.', precio: '$6000', imagen: '../img/lavadoautonormal.jpg' },
-        { titulo: 'Lavado Full y Brillado', descripcion: 'Exterior completo, encerado, motor superficial y aspirado profundo.', precio: '$7000', imagen: '../img/interiorauto.jpg' }
+        { titulo: 'Enjuague Rápido', descripcion: 'Lavado exterior ligero y secado rápido.', precio: '$15000', imagen: '../img/carrolavadob.jpeg' },
+        { titulo: 'Lavado Normal', descripcion: 'Exterior completo, llantas, vidrios y aspirado básico.', precio: '$25000', imagen: '../img/carrolavado.jpg' },
+        { titulo: 'Lavado Full y Brillado', descripcion: 'Exterior completo, encerado, motor superficial y aspirado profundo.', precio: '$40000', imagen: '../img/interiorauto.jpg' }
       ];
     } else if (tipo === 'moto') {
       servicios = [
-        { titulo: 'Enjuague Básico', descripcion: 'Lavado exterior rápido y llantas.', precio: '$15000', imagen: '../img/enjuagar.webp' },
-        { titulo: 'Lavado Normal', descripcion: 'Exterior completo + limpieza de cadena.', precio: '$20000', imagen: '../img/lavado normal.webp' },
-        { titulo: 'Brillado y Detallado', descripcion: 'Pulido de partes metálicas y limpieza profunda.', precio: '$40000', imagen: '../img/brillado.jpg' }
+        { titulo: 'Enjuague Básico', descripcion: 'Lavado exterior rápido y llantas.', precio: '$5000', imagen: '../img/enjuagar.webp' },
+        { titulo: 'Lavado Normal', descripcion: 'Exterior completo + limpieza de cadena.', precio: '$6000', imagen: '../img/lavado normal.webp' },
+        { titulo: 'Brillado y Detallado', descripcion: 'Pulido de partes metálicas y limpieza profunda.', precio: '$7000', imagen: '../img/brillado.jpg' }
       ];
     } else if (tipo === 'camion') {
       servicios = [
