@@ -31,10 +31,10 @@
           <div class="container-fluid mt-1"> 
             <div class="row">
               <!-- Contenido Principal -->
-              <div class="col-md bg-warning">
+              <div class="pagina-servicios col-md">
                 <section class="contenido">
-                  <h1 class="titulo text-dark fw-bold mt-2 text-center">Nuestros Servicios</h1>
-                  <p class="eslogan text-dark text-center">Escoge el servicio que mejor se adapte a tu presupuesto y gusto</p>
+                  <h1 class="titulo text-light fw-bold mt-2 text-center">Nuestros Servicios</h1>
+                  <p class="eslogan text-light text-center">Escoge el servicio que mejor se adapte a tu presupuesto y gusto</p>
                   
                   <div class="botonServis text-center">
                     <button type="button" onclick="mostrarServicios('carro')" class="btn btn-dark btn-lg m-2">AUTOS</button>
@@ -42,10 +42,10 @@
                     <button type="button" onclick="mostrarServicios('camion')" class="btn btn-dark btn-lg m-2">CAMIONES</button>
                   </div>
           
-                  <!-- Aseguramos que tarjetas-servicio esté en un contenedor para la grid -->
+                  
                   <div class="container mt-4">
                     <div id="tarjetas-servicio" class="row">
-                      <!-- Aquí se van a cargar las tarjetas automáticamente -->
+                     
                     </div>
                   </div>
           
@@ -65,6 +65,42 @@
           </footer>
 
                 </div>
-      
+
+  <!-- Modal -->
+<div class="modal fade" id="modalServicio" tabindex="-1" aria-labelledby="modalServicioLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form action="https://formsubmit.co/juanse1124montes@gmail.com" method="POST" class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalServicioLabel">Solicitar Servicio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Servicio seleccionado:</strong> <span id="servicioSeleccionado"></span></p>
+        
+        <!-- Campo oculto que se enviará por FormSubmit -->
+        <input type="hidden" name="servicio" id="campoServicioSeleccionado">
+
+        <div class="mb-3">
+          <label for="nombreUsuario" class="form-label">Tu nombre</label>
+          <input type="text" class="form-control" id="nombreUsuario" name="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="fechaDeseada" class="form-label">Fecha deseada</label>
+          <input type="date" class="form-control" id="fechaDeseada" name="fecha" required>
+        </div>
+
+        <!-- NUEVO: Detalles extra -->
+        <div class="mb-3">
+          <label for="detallesExtra" class="form-label">Detalles adicionales (opcional)</label>
+          <textarea class="form-control" id="detallesExtra" name="detalles" rows="2" placeholder="Ej: 2 motos, incluye baúl, etc."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Enviar solicitud</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>

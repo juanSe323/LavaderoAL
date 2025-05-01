@@ -2,7 +2,14 @@ body {
     background-color:black !important; /* Color de fondo gris claro */
     font-family: 'Poppins', sans-serif;
   }
-  
+.pagina-servicios{
+  background-image: url(../img/fondo.jpg) !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
   .navbar .nav-link:hover {
     color: #ffc107 !important;  /* Amarillo Bootstrap */
     transition: 0.3s;

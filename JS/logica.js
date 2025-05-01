@@ -8,21 +8,21 @@ function mostrarServicios(tipo) {
   
     if (tipo === 'carro') {
       servicios = [
-        { titulo: 'Enjuague Rápido', descripcion: 'Lavado exterior ligero y secado rápido.', precio: '$10', imagen: 'img/enjuague-carro.jpg' },
-        { titulo: 'Lavado Normal', descripcion: 'Exterior completo, llantas, vidrios y aspirado básico.', precio: '$20', imagen: 'img/lavado-carro.jpg' },
-        { titulo: 'Lavado Full y Brillado', descripcion: 'Exterior completo, encerado, motor superficial y aspirado profundo.', precio: '$35', imagen: 'img/brillado-carro.jpg' }
+        { titulo: 'Enjuague Rápido', descripcion: 'Lavado exterior ligero y secado rápido.', precio: '$5000', imagen: '../img/lavadoautos.jpeg' },
+        { titulo: 'Lavado Normal', descripcion: 'Exterior completo, llantas, vidrios y aspirado básico.', precio: '$6000', imagen: '../img/lavadoautonormal.jpg' },
+        { titulo: 'Lavado Full y Brillado', descripcion: 'Exterior completo, encerado, motor superficial y aspirado profundo.', precio: '$7000', imagen: '../img/interiorauto.jpg' }
       ];
     } else if (tipo === 'moto') {
       servicios = [
-        { titulo: 'Enjuague Básico', descripcion: 'Lavado exterior rápido y llantas.', precio: '$5', imagen: 'img/enjuague-moto.jpg' },
-        { titulo: 'Lavado Normal', descripcion: 'Exterior completo + limpieza de cadena.', precio: '$10', imagen: 'img/lavado-moto.jpg' },
-        { titulo: 'Brillado y Detallado', descripcion: 'Pulido de partes metálicas y limpieza profunda.', precio: '$15', imagen: 'img/brillado-moto.jpg' }
+        { titulo: 'Enjuague Básico', descripcion: 'Lavado exterior rápido y llantas.', precio: '$15000', imagen: '../img/enjuagar.webp' },
+        { titulo: 'Lavado Normal', descripcion: 'Exterior completo + limpieza de cadena.', precio: '$20000', imagen: '../img/lavado normal.webp' },
+        { titulo: 'Brillado y Detallado', descripcion: 'Pulido de partes metálicas y limpieza profunda.', precio: '$40000', imagen: '../img/brillado.jpg' }
       ];
     } else if (tipo === 'camion') {
       servicios = [
-        { titulo: 'Enjuague Exterior', descripcion: 'Lavado de cabina y trailer exterior.', precio: '$30', imagen: 'img/enjuague-camion.jpg' },
-        { titulo: 'Lavado Completo', descripcion: 'Exterior completo y limpieza interior de cabina.', precio: '$50', imagen: 'img/lavado-camion.jpg' },
-        { titulo: 'Lavado Especial', descripcion: 'Chasis, motor, ejes y desinfección completa.', precio: '$70', imagen: 'img/brillado-camion.jpg' }
+        { titulo: 'Enjuague Exterior', descripcion: 'Lavado de cabina y trailer exterior.', precio: '$40000', imagen: '../img/interiorcamion.jpeg' },
+        { titulo: 'Lavado Completo', descripcion: 'Exterior completo y limpieza interior de cabina.', precio: '$50000', imagen: '../img/lavadocamion.jpg' },
+        { titulo: 'Lavado Especial', descripcion: 'Chasis, motor, ejes y desinfección completa.', precio: '$60000', imagen: '../img/lavado-chasis.jpg' }
       ];
     }
   
@@ -30,18 +30,19 @@ function mostrarServicios(tipo) {
   
     servicios.forEach(servicio => {
       fila.innerHTML += `
-        <div class="col-md-4 mb-4 d-flex justify-content-center">
-          <div class="card h-100" style="width: 18rem;">
-            <img src="${servicio.imagen}" class="card-img-top" alt="${servicio.titulo}">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${servicio.titulo}</h5>
-              <p class="card-text">${servicio.descripcion}</p>
-              <p class="card-text"><strong>Precio: ${servicio.precio}</strong></p>
-              <a href="#" class="btn btn-primary mt-auto">Seleccionar</a>
-            </div>
+      <div class="col-md-4 mb-4 d-flex justify-content-center">
+        <div class="card h-100 bg-secondary" style="width: 18rem;">
+          <img src="${servicio.imagen}" class="card-img-top" alt="${servicio.titulo}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${servicio.titulo}</h5>
+            <p class="card-text">${servicio.descripcion}</p>
+            <p class="card-text"><strong>Precio: ${servicio.precio}</strong></p>
+            <button onclick="abrirModalConServicio('${servicio.titulo}', '${tipo}')" class="btn btn-primary mt-auto">Seleccionar</button>
           </div>
         </div>
-      `;
+      </div>
+    `;
+    
     });
   }
   
@@ -54,4 +55,37 @@ function mostrarServicios(tipo) {
   document.addEventListener('DOMContentLoaded', function() {
     mostrarServicios('carro');
   });
+
+  function abrirModalConServicio(servicioTitulo, tipoVehiculo) {
+    const servicioCompleto = `${servicioTitulo} - ${tipoVehiculo}`;
+  
+    document.getElementById('servicioSeleccionado').textContent = servicioCompleto;
+    document.getElementById('campoServicioSeleccionado').value = servicioCompleto;
+  
+    // Resetear campos del formulario
+    document.getElementById('nombreUsuario').value = '';
+    document.getElementById('fechaDeseada').value = '';
+    document.getElementById('detallesExtra').value = '';
+  
+    // Mostrar modal
+    const modal = new bootstrap.Modal(document.getElementById('modalServicio'));
+    modal.show();
+  }
+  
+  
+  function actualizarLinkCorreo() {
+    const nombre = document.getElementById('nombreUsuario').value;
+    const fecha = document.getElementById('fechaDeseada').value;
+    const servicio = window.servicioElegido || 'No especificado';
+  
+    const asunto = encodeURIComponent("Solicitud de servicio: " + servicio);
+    const cuerpo = encodeURIComponent(`Hola, mi nombre es ${nombre}.\nDeseo solicitar el servicio de "${servicio}" para la fecha: ${fecha}.\nGracias.`);
+  
+    const mailtoLink = `mailto:juanse1124montes@gmail.com?subject=${asunto}&body=${cuerpo}`;
+    document.getElementById('botonEnviarCorreo').href = mailtoLink;
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('botonEnviarCorreo').addEventListener('click', enviarCorreo);
+  });
+  
   
