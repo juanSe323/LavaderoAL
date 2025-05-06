@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <!-- Navbar -->  
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
             <div class="container-fluid">
               <a class="navbar-brand fw-bold text-warning" href="../index.html">Lavadero AL</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
@@ -30,6 +31,7 @@
           </nav>
           <div class="container-fluid mt-1"> 
             <div class="row">
+              
               <!-- Contenido Principal -->
               <div class="pagina-servicios col-md">
                 <section class="contenido">
@@ -45,10 +47,56 @@
                   
                   <div class="container mt-4">
                     <div id="tarjetas-servicio" class="row">
-                     
+
+                     <!-- Aquí se generarán las tarjetas de servicio dinámicamente -->
+                    
                     </div>
+                  
                   </div>
-          
+
+                  <!-- Botón para mostrar la calculadora con icono -->
+<div class="text-center my-4">
+  <button class="btn btn-warning" onclick="mostrarCalculadora()">
+    <i class="fas fa-calculator me-2"></i>Calculadora de Precios
+  </button>
+</div>
+
+<!-- Contenedor de la calculadora con diseño en tonos grises -->
+<div class="container" id="calculadora-servicio" style="display:none;">
+  <h3>Calculadora de Precio del Servicio</h3>
+
+  <!-- Selección de Tipo de Vehículo -->
+  <div class="mb-4">
+    <label for="tipoVehiculo" class="form-label">Seleccione el Tipo de Vehículo</label>
+    <select id="tipoVehiculo" class="form-select">
+      <option value="carro">Carro</option>
+      <option value="moto">Moto</option>
+      <option value="camion">Camión</option>
+    </select>
+  </div>
+
+  <!-- Selección de Tipo de Lavado -->
+  <div class="mb-4">
+    <label for="tipoLavado" class="form-label">Seleccione el Tipo de Lavado</label>
+    <select id="tipoLavado" class="form-select" disabled>
+      <!-- Las opciones se cargarán dinámicamente -->
+    </select>
+  </div>
+
+  <!-- Selección de Cantidad -->
+  <div class="mb-4">
+    <label for="cantidad" class="form-label">Cantidad de Servicios</label>
+    <input type="number" id="cantidad" class="form-control" min="1" value="1">
+  </div>
+
+  <!-- Resultado -->
+  <div class="mb-3">
+    <label class="form-label">Precio Estimado</label>
+    <p id="precio-total" class="form-control">Seleccione opciones para calcular</p>
+  </div>
+</div>
+
+
                 </section>
               </div>
             </div>

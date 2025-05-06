@@ -1,35 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/estilos.css">  
-    <title>Servicios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/galeria.css">
+  <title>Galería - Lavadero AL</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-            <div class="container-fluid">
-              <a class="navbar-brand fw-bold text-warning" href="../index.html">Lavadero AL</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarDW">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link active text-light" href="../index.html">Inicio</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="../html/servicios.html">Servicios</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="../html/galeria.html">Galería</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="../html/preguntas.html">Preguntas</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="../html/contacto.html">Contacto</a></li>
-                </ul>
+  <div class="container-fluid">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-warning" href="../index.html">Lavadero AL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarDW">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../html/servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link active text-light" href="../html/galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../html/preguntas.html">Preguntas</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../html/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="pagina-galeria">
+      <div class="container py-5">
+        <h1 class="titulo text-center mb-2">GALERÍA</h1>
+        <h2 class="subtitulo text-center mb-5">ANTES / DESPUÉS</h2>
+
+        <!-- Filtros -->
+        <div class="filtros-container text-center mb-4">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-filtro active" data-filter="todos">Todos</button>
+            <button type="button" class="btn btn-filtro" data-filter="motos">Motos</button>
+            <button type="button" class="btn btn-filtro" data-filter="carros">Carros</button>
+            <button type="button" class="btn btn-filtro" data-filter="camiones">Camiones</button>
+          </div>
+        </div>
+
+        <!-- Galería de Antes/Después -->
+        <div class="row galeria-container">
+          <!-- Elemento 1: Simple Enjuague -->
+          <div class="col-lg-4 col-md-6 mb-4 elemento-galeria" data-categoria="motos">
+            <div class="card-galeria">
+              <div class="before-after-container">
+                <div class="img-container">
+                  <img src="../img/galeria/enjuague-antes.jpg" alt="Antes del enjuague" class="img-antes">
+                  <img src="../img/galeria/enjuague-despues.jpg" alt="Después del enjuague" class="img-despues">
+                  <div class="slider-handle">
+                    <div class="slider-circle">
+                      <i class="fas fa-chevron-left"></i>
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="etiquetas-container">
+                  <span class="etiqueta etiqueta-antes">ANTES</span>
+                  <span class="etiqueta etiqueta-despues">DESPUÉS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h3>Simple Enjuague</h3>
+                <p>Limpieza básica para eliminar suciedad superficial</p>
+                <span class="badge bg-warning text-dark">Motos</span>
               </div>
             </div>
-          </nav>
-   
-          
-
           </div>
+
+          <!-- Elemento 2: Lavado Normal -->
+          <div class="col-lg-4 col-md-6 mb-4 elemento-galeria" data-categoria="motos">
+            <div class="card-galeria">
+              <div class="before-after-container">
+                <div class="img-container">
+                  <img src="../img/galeria/lavado-antes.jpg" alt="Antes del lavado normal" class="img-antes">
+                  <img src="../img/galeria/lavado-despues.jpg" alt="Después del lavado normal" class="img-despues">
+                  <div class="slider-handle">
+                    <div class="slider-circle">
+                      <i class="fas fa-chevron-left"></i>
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="etiquetas-container">
+                  <span class="etiqueta etiqueta-antes">ANTES</span>
+                  <span class="etiqueta etiqueta-despues">DESPUÉS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h3>Lavado Normal</h3>
+                <p>Limpieza completa con productos especializados</p>
+                <span class="badge bg-warning text-dark">Motos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Elemento 3: Limpieza de Interiores -->
+          <div class="col-lg-4 col-md-6 mb-4 elemento-galeria" data-categoria="carros">
+            <div class="card-galeria">
+              <div class="before-after-container">
+                <div class="img-container">
+                  <img src="../img/galeria/interior-antes.jpg" alt="Antes de limpieza de interiores" class="img-antes">
+                  <img src="../img/galeria/interior-despues.jpg" alt="Después de limpieza de interiores" class="img-despues">
+                  <div class="slider-handle">
+                    <div class="slider-circle">
+                      <i class="fas fa-chevron-left"></i>
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="etiquetas-container">
+                  <span class="etiqueta etiqueta-antes">ANTES</span>
+                  <span class="etiqueta etiqueta-despues">DESPUÉS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h3>Limpieza de Interiores</h3>
+                <p>Aspirado profundo y tratamiento de tapicería</p>
+                <span class="badge bg-warning text-dark">Carros</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Elemento 4: Pulido de Carrocería -->
+          <div class="col-lg-4 col-md-6 mb-4 elemento-galeria" data-categoria="carros">
+            <div class="card-galeria">
+              <div class="before-after-container">
+                <div class="img-container">
+                  <img src="../img/galeria/pulido-antes.jpg" alt="Antes del pulido" class="img-antes">
+                  <img src="../img/galeria/pulido-despues.jpg" alt="Después del pulido" class="img-despues">
+                  <div class="slider-handle">
+                    <div class="slider-circle">
+                      <i class="fas fa-chevron-left"></i>
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="etiquetas-container">
+                  <span class="etiqueta etiqueta-antes">ANTES</span>
+                  <span class="etiqueta etiqueta-despues">DESPUÉS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h3>Pulido de Carrocería</h3>
+                <p>Restauración del brillo y eliminación de rayones</p>
+                <span class="badge bg-warning text-dark">Carros</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Elemento 5: Lavado de Motor -->
+          <div class="col-lg-4 col-md-6 mb-4 elemento-galeria" data-categoria="camiones">
+            <div class="card-galeria">
+              <div class="before-after-container">
+                <div class="img-container">
+                  <img src="../img/galeria/motor-antes.jpg" alt="Antes del lavado de motor" class="img-antes">
+                  <img src="../img/galeria/motor-despues.jpg" alt="Después del lavado de motor" class="img-despues">
+                  <div class="slider-handle">
+                    <div class="slider-circle">
+                      <i class="fas fa-chevron-left"></i>
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="etiquetas-container">
+                  <span class="etiqueta etiqueta-antes">ANTES</span>
+                  <span class="etiqueta etiqueta-despues">DESPUÉS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h3>Lavado de Motor</h3>
+                <p>Limpieza especializada del compartimiento del motor</p>
+                <span class="badge bg-warning text-dark">Camiones</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Elemento 6: Lavado Completo -->
+          <div class="col-lg-4 col-md-6 mb-4 elemento-galeria" data-categoria="camiones">
+            <div class="card-galeria">
+              <div class="before-after-container">
+                <div class="img-container">
+                  <img src="../img/galeria/completo-antes.jpg" alt="Antes del lavado completo" class="img-antes">
+                  <img src="../img/galeria/completo-despues.jpg" alt="Después del lavado completo" class="img-despues">
+                  <div class="slider-handle">
+                    <div class="slider-circle">
+                      <i class="fas fa-chevron-left"></i>
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="etiquetas-container">
+                  <span class="etiqueta etiqueta-antes">ANTES</span>
+                  <span class="etiqueta etiqueta-despues">DESPUÉS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h3>Lavado Completo</h3>
+                <p>Servicio integral exterior e interior</p>
+                <span class="badge bg-warning text-dark">Camiones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paginación -->
+        <nav aria-label="Navegación de galería" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Siguiente</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light mt-1">
+      <div class="container text-center py-3">
+        <p class="mb-1">© 2025 Lavadero AL. Todos los derechos reservados.</p>
+        <p class="mb-0">
+          <a href="#" class="text-warning text-decoration-none">Política de privacidad</a> |
+          <a href="#" class="text-warning text-decoration-none">Términos de uso</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="../JS/galeria.js"></script>
 </body>
 </html>

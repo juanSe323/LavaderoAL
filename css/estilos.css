@@ -1,7 +1,20 @@
+@font-face {
+  font-family: 'MiFuente';
+  src: url('../fonts/MavenPro-VariableFont_wght.ttf')
+}
+
 body {
     background-color:black !important; /* Color de fondo gris claro */
-    font-family: 'Poppins', sans-serif;
+    font-family:'Mifuente';
   }
+
+  .logoAL{
+    border-radius: .5rem;
+    width: 60px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+  }
+
 .pagina-servicios{
   background-image: url(../img/fondo.jpg) !important;
   background-size: cover;
@@ -46,12 +59,153 @@ justify-content: center;
   margin-bottom: 20px;
 }
 
+.card{
+  background-color: rgba(52, 58, 64, 0.9); /* Gris oscuro semitransparente */
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top{
+  max-height: 500px;
+  max-width: 500px;
+}
+
 .tarjeta {
   background-color: #f0f0f0;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+#calculadora-servicio {
+  background-color: rgba(33, 37, 41, 0.75); /* Gris oscuro semitransparente (similar a bg-secondary) */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque para glassmorphism */
+  -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+  border: 1px solid rgba(52, 58, 64, 0.5); /* Borde gris más oscuro */
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #adb5bd !important; /* Gris claro suave para el texto */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s ease;
+}
+
+/* Título de la calculadora */
+#calculadora-servicio h3 {
+  color: #ffc107; /* Mantenemos el amarillo Bootstrap para consistencia */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+}
+
+/* Estilos para las etiquetas */
+#calculadora-servicio .form-label {
+  color: #ced4da; /* Gris claro para etiquetas */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para los select y inputs */
+#calculadora-servicio .form-select,
+#calculadora-servicio .form-control {
+  background-color: rgba(52, 58, 64, 0.8); /* Gris oscuro semitransparente */
+  border: 1px solid rgba(73, 80, 87, 0.5); /* Borde gris medio */
+  color: #dee2e6; /* Gris claro para el texto */
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+#calculadora-servicio .form-select:focus,
+#calculadora-servicio .form-control:focus {
+  background-color: rgba(73, 80, 87, 0.8); /* Gris medio al enfocar */
+  border-color: rgba(255, 193, 7, 0.5); /* Borde amarillo con transparencia */
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.15);
+}
+
+/* Estilo para las opciones del select */
+#calculadora-servicio .form-select option {
+  background-color: #343a40; /* Gris oscuro para las opciones */
+  color: #dee2e6; /* Gris claro para el texto */
+}
+
+/* Estilo para el precio total */
+#precio-total {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffc107 !important; /* Amarillo Bootstrap para destacar */
+  text-align: center;
+  background-color: rgba(33, 37, 41, 0.9) !important; /* Gris muy oscuro */
+  border: 1px solid rgba(255, 193, 7, 0.3) !important; /* Borde amarillo sutil */
+}
+
+/* Botón para mostrar la calculadora */
+.btn-calculadora {
+  background-color: #ffc107; /* Amarillo Bootstrap */
+  border: none;
+  color: #212529; /* Texto oscuro */
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-calculadora:hover {
+  background-color: #ffca2c; /* Amarillo un poco más claro al hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Animación para mostrar la calculadora */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#calculadora-servicio[style*="display: block"] {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  #calculadora-servicio {
+    padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #calculadora-servicio h3 {
+    font-size: 1.5rem;
+  }
+
+  #precio-total {
+    font-size: 1.25rem;
+  }
+}
+
 
 footer{
   border-radius: .5rem;
