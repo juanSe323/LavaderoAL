@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/calificaciones.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="../JS/emailjs-config.js"></script>
+  <script src="../JS/resenas.js"></script>
+  <title>Reseñas - Lavadero AL</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold text-warning" href="../index.html"><img src="../img/cocheAL.png" alt="logo" class="logoAL">Lavadero AL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarDW">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active text-light" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../html/servicios.html">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../html/galeria.html">Galería</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../html/preguntas.html">Preguntas</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="../html/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+   <!-- Contenido Principal -->
+<div class="pagina-resenas bg-warning py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="titulo">¡Danos tu Opinión!</h1>
+    </div>
+
+<!-- FORMULARIO DE RESEÑAS -->
+<form id="formResena" class="formulario-resena">
+  <div class="row mb-4">
+    <div class="col-md-6 mb-3">
+      <label for="nombre" class="form-label text-dark">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="apellido" class="form-label text-dark">Apellido:</label>
+      <input type="text" class="form-control" id="apellido" name="apellido" required>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <label class="form-label text-dark">Puntuación:</label>
+    <div id="estrellasCalificacion" class="estrellas-calificables">
+      <i class="bi bi-star estrella text-warning" data-index="0"></i>
+      <i class="bi bi-star estrella text-warning" data-index="1"></i>
+      <i class="bi bi-star estrella text-warning" data-index="2"></i>
+      <i class="bi bi-star estrella text-warning" data-index="3"></i>
+      <i class="bi bi-star estrella text-warning" data-index="4"></i>
+    </div>
+    <input type="hidden" id="valoracion" name="valoracion" value="0">
+    
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-6 mb-3">
+      <label for="descripcion" class="form-label text-dark">Descripción:</label>
+      <textarea class="form-control" id="descripcion" name="descripcion" rows="6" required></textarea>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="sugerencias" class="form-label text-dark">Sugerencias:</label>
+      <textarea class="form-control" id="sugerencias" name="sugerencias" rows="6"></textarea>
+    </div>
+  </div>
+
+  <div class="text-end">
+    <button type="submit" class="btn btn-enviar">
+      Enviar Reseña
+    </button>
+  </div>
+</form>
+
+    <!-- Reseñas Destacadas -->
+    <div class="reseñas-destacadas mt-5">
+      <h2 class="subtitulo mb-4 text-center">Reseñas de Nuestros Clientes</h2>
+      <div class="row">
+        <!-- Aquí se mantienen las reseñas como las tenías -->
+        <!-- ... -->
+      </div>
+      <div class="text-center mt-3">
+        <a href="#" class="btn-mas-resenas" id="btnMasResenas">Ver Todas las Reseñas</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <footer class="bg-dark text-light pt-4 pb-3 mt-1">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-3">
+        <h5 class="text-warning">Lavadero AL</h5>
+        <p class="small">Tu vehículo en manos expertas. Calidad, rapidez y atención garantizadas.</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="text-warning">Enlaces</h6>
+        <ul class="list-unstyled">
+          <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+          <li><a href="../html/servicios.html" class="text-light text-decoration-none">Servicios</a></li>
+          <li><a href="../html/galeria.html" class="text-light text-decoration-none">Galería</a></li>
+          <li><a href="../html/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="text-warning">Redes Sociales</h6>
+        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-2"><i class="bi bi-whatsapp"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <p class="mb-1">© 2025 Lavadero AL. Todos los derechos reservados.</p>
+      <p class="mb-0">
+        <a href="#" class="text-warning text-decoration-none">Política de privacidad</a> |
+        <a href="#" class="text-warning text-decoration-none">Términos de uso</a>
+      </p>
+    </div>
+  </div>
+</footer>
+  </div>
+
+  <!-- MODAL DE AGRADECIMIENTO -->
+<div class="modal fade" id="modalGracias" tabindex="-1" aria-labelledby="modalGraciasLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalGraciasLabel">¡Gracias por tu reseña!</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        Tu opinión ha sido registrada exitosamente y nos ayuda a mejorar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE ERROR -->
+<div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border border-danger">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalErrorLabel">¡Ups! Ocurrió un error</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-dark">
+        No pudimos registrar tu reseña. Por favor intenta nuevamente.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("_0gz9ldVqTOWe49Rn");
+</script>
+
+</body>
+</html>

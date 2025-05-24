@@ -3,35 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">  
+    <link rel="stylesheet" href="../css/preguntas.css">
     <title>Preguntas y Reseñas</title>
 </head>
 <body>
 
+  <div class="container-fluid">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
       <div class="container-fluid">
-
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold text-warning" href="../index.html">Lavadero AL</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarDW">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active text-light" href="../index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../html/servicios.html">Servicios</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../html/galeria.html">Galería</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../html/preguntas.html">Preguntas</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="../html/contacto.html">Contacto</a></li>
-            </ul>
-          </div>
+        <a class="navbar-brand fw-bold text-warning" href="../index.html"><img src="../img/cocheAL.png" alt="logo" class="logoAL">Lavadero AL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarDW">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-light" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../html/servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../html/galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link active text-light" href="../html/preguntas.html">Preguntas</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="../html/contacto.html">Contacto</a></li>
+          </ul>
         </div>
-      </nav>
-
-      
-
       </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="pagina-preguntas">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Columna Principal - Preguntas Frecuentes -->
+          <div class="col-lg-12 col-md-12 seccion-preguntas">
+            <h1 class="titulo text-center mb-5">Preguntas Frecuentes</h1>
+            
+            <!-- Preguntas Destacadas -->
+            <div class="row preguntas-destacadas mb-5">
+              <!-- Pregunta 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="card-pregunta">
+                  <h3>¿Necesito agendar una cita?</h3>
+                  <p>Para servicios básicos no es necesario, pero para detailing y servicios especiales no sería una mala sugerencia.</p>
+                </div>
+              </div>
+              
+              <!-- Pregunta 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="card-pregunta">
+                  <h3>¿Cuánto tiempo toma un lavado básico?</h3>
+                  <p>Un lavado básico toma aproximadamente 30-45 minutos dependiendo del tamaño del vehículo.</p>
+                </div>
+              </div>
+              
+              <!-- Pregunta 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="card-pregunta">
+                  <h3>¿Qué métodos de pago aceptan?</h3>
+                  <p>Aceptamos efectivo, tarjetas de crédito/débito y transferencias bancarias.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Acordeón de Preguntas Adicionales -->
+            <div class="accordion mb-5" id="accordionPreguntas">
+              <h2 class="subtitulo mb-4">Más Preguntas</h2>
+              
+              <!-- Categoría: Servicios -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-car-wash me-2"></i> Sobre Nuestros Servicios
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPreguntas">
+                  <div class="accordion-body">
+                    <div class="pregunta-item">
+                      <h4>¿Qué incluye el lavado completo?</h4>
+                      <p>El lavado completo incluye limpieza exterior, encerado, limpieza de llantas, aspirado interior, limpieza de tablero y consolas, y limpieza de vidrios por dentro y fuera.</p>
+                    </div>
+                    
+                    <div class="pregunta-item">
+                      <h4>¿Ofrecen servicios a domicilio?</h4>
+                      <p>Sí, ofrecemos servicios a domicilio para lavados básicos y completos. Hay un cargo adicional dependiendo de la distancia.</p>
+                    </div>
+                    
+                    <div class="pregunta-item">
+                      <h4>¿Qué productos utilizan para el lavado?</h4>
+                      <p>Utilizamos productos premium biodegradables que protegen la pintura y el interior de tu vehículo sin dañar el medio ambiente.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Categoría: Precios -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fas fa-tag me-2"></i> Precios y Promociones
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPreguntas">
+                  <div class="accordion-body">
+                    <div class="pregunta-item">
+                      <h4>¿Tienen algún plan de fidelidad o descuentos?</h4>
+                      <p>Sí, contamos con una tarjeta de fidelidad donde acumulas puntos por cada servicio. Al completar 10 servicios, obtienes un lavado básico gratis.</p>
+                    </div>
+                    
+                    <div class="pregunta-item">
+                      <h4>¿Hay diferencia de precio entre tipos de vehículos?</h4>
+                      <p>Sí, los precios varían según el tipo y tamaño del vehículo. Las motos tienen un precio menor, mientras que camionetas y camiones tienen un costo adicional.</p>
+                    </div>
+                    
+                    <div class="pregunta-item">
+                      <h4>¿Ofrecen descuentos para flotas de vehículos?</h4>
+                      <p>Sí, tenemos planes especiales para empresas con flotas de vehículos. Contáctanos para más información sobre estos planes corporativos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Categoría: Horarios -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="fas fa-clock me-2"></i> Horarios y Disponibilidad
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPreguntas">
+                  <div class="accordion-body">
+                    <div class="pregunta-item">
+                      <h4>¿Cuál es su horario de atención?</h4>
+                      <p>Nuestro horario es de lunes a Sabados de 7:30 AM a 6:00 PM y domingos de 7:30 AM a 5:00 PM.</p>
+                    </div>
+                    
+                    <div class="pregunta-item">
+                      <h4>¿Atienden los días festivos?</h4>
+                      <p>En días festivos tenemos un horario especial de 9:00 AM a 2:00 PM. Algunos festivos importantes permanecemos cerrados, lo cual anunciamos con anticipación.</p>
+                    </div>
+                    
+                    <div class="pregunta-item">
+                      <h4>¿Cuál es el tiempo de espera promedio?</h4>
+                      <p>El tiempo de espera varía según la hora y día. En horas pico (fines de semana) puede ser de 15-30 minutos. Entre semana, generalmente no hay tiempo de espera.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Botones de Acción -->
+            <div class="botones-accion text-center mb-5">
+              <button class="btn btn-light btn-lg me-3" data-bs-toggle="modal" data-bs-target="#modalPregunta"> Pregúntanos</button>
+              <button class="btn btn-dark btn-lg" id="btnCalificar"><a class="text-light text-decoration-none" href="../html/calificaciones.html">Danos tu Opinión</a></button>
+            </div>
+            
+            <!-- Modal: Enviar Pregunta -->
+<div class="modal fade" id="modalPregunta" tabindex="-1" aria-labelledby="modalPreguntaLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="modalPreguntaLabel">Envíanos tu Pregunta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="formPregunta">
+          <div class="mb-3">
+            <label for="nombrePregunta" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombrePregunta" name="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="emailPregunta" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailPregunta" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensajePregunta" class="form-label">Tu Pregunta</label>
+            <textarea class="form-control" id="mensajePregunta" name="mensaje" rows="3" required></textarea>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-warning">Enviar</button>
+            <button type="button" class="btn btn-secondary ms-2" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+            <!-- Modal: Confirmación -->
+<div class="modal fade" id="modalConfirmacionPregunta" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalConfirmacionLabel">¡Gracias!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <p>Tu pregunta fue enviada correctamente. Pronto te contactaremos si es necesario.</p>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+         
+        </div>
+      </div>
+    </div>
+
+   <footer class="bg-dark text-light pt-4 pb-3 mt-1">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-3">
+        <h5 class="text-warning">Lavadero AL</h5>
+        <p class="small">Tu vehículo en manos expertas. Calidad, rapidez y atención garantizadas.</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="text-warning">Enlaces</h6>
+        <ul class="list-unstyled">
+          <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+          <li><a href="../html/servicios.html" class="text-light text-decoration-none">Servicios</a></li>
+          <li><a href="../html/galeria.html" class="text-light text-decoration-none">Galería</a></li>
+          <li><a href="../html/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="text-warning">Redes Sociales</h6>
+        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-2"><i class="bi bi-whatsapp"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <p class="mb-1">© 2025 Lavadero AL. Todos los derechos reservados.</p>
+      <p class="mb-0">
+        <a href="#" class="text-warning text-decoration-none">Política de privacidad</a> |
+        <a href="#" class="text-warning text-decoration-none">Términos de uso</a>
+      </p>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+<!-- Modal: Confirmación -->
+<div class="modal fade" id="modalConfirmacionPregunta" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalConfirmacionLabel">¡Gracias!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>Tu pregunta se ha enviado correctamente. ¡Nos pondremos en contacto contigo pronto!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("_0gz9ldVqTOWe49Rn");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+<script src="../js/preguntas.js"></script>
 </body>
 </html>

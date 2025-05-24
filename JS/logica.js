@@ -96,13 +96,13 @@ function mostrarServicios(tipo) {
   servicios.forEach((servicio) => {
     fila.innerHTML += `
     <div class="col-md-4 mb-4 d-flex justify-content-center">
-      <div class="card h-100 bg-secondary" style="width: 18rem; ">
+      <div class="card h-100 bg-dark" style="width: 18rem; ">
         <img src="${servicio.imagen}" class="card-img-top" alt="${servicio.titulo}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-warning fw-bold">${servicio.titulo}</h5>
-          <p class="card-text text-dark">${servicio.descripcion}</p>
+          <p class="card-text text-light">${servicio.descripcion}</p>
           <p class="card-text"><strong>Precio: ${servicio.precio}</strong></p>
-          <button onclick="abrirModalConServicio('${servicio.titulo}', '${tipo}')" class="btn btn-primary mt-auto">Seleccionar</button>
+          <button onclick="abrirModalConServicio('${servicio.titulo}', '${tipo}')" class="btn btn-warning mt-auto">Seleccionar</button>
         </div>
       </div>
     </div>

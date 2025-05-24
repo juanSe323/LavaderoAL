@@ -1,0 +1,292 @@
+/* Estilos para la página de preguntas frecuentes */
+body {
+    background-color: black !important;
+    
+  }
+  
+  .pagina-preguntas {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: calc(100vh - 76px - 80px); /* Altura total menos navbar y footer */
+  }
+  
+  /* Sección principal de preguntas */
+  .seccion-preguntas {
+    background-color: #ffc107; /* Amarillo Bootstrap */
+    padding: 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Sección lateral de nosotros */
+  .seccion-nosotros {
+    background-color: #343a40; /* Gris oscuro */
+    padding: 2rem;
+    color: #fff;
+    border-radius: 0 0.5rem 0.5rem 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Títulos */
+  .titulo {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #212529;
+    margin-bottom: 2rem;
+  }
+  
+  .subtitulo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #212529;
+  }
+  
+  /* Tarjetas de preguntas destacadas */
+  .card-pregunta {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-pregunta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-pregunta h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 1rem;
+  }
+  
+  .card-pregunta p {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  /* Acordeón de preguntas */
+  .accordion-item {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1rem;
+  }
+  
+  .accordion-button {
+    background-color: #fff;
+    color: #212529;
+    font-weight: 600;
+    box-shadow: none;
+    border-radius: 0.5rem !important;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #212529;
+    color: #ffc107;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.125);
+  }
+  
+  .accordion-body {
+    background-color: #fff;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  /* Preguntas dentro del acordeón */
+  .pregunta-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .pregunta-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .pregunta-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pregunta-item p {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  /* Botones de acción */
+  .botones-accion {
+    margin-top: 2rem;
+  }
+  
+  .btn-light {
+    background-color: #fff;
+    border: none;
+    color: #212529;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-light:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-dark {
+    background-color: #212529;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-dark:hover {
+    background-color: #343a40;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Formularios */
+  .formulario-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .formulario-container .card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario-container .card-header {
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem 1.5rem;
+  }
+  
+  .formulario-container .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Sistema de estrellas para calificación */
+  .estrellas-container {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .estrella {
+    font-size: 2rem;
+    color: #dee2e6;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .estrella:hover,
+  .estrella.activa {
+    color: #ffc107;
+  }
+  
+  /* Sección Sobre Nosotros */
+  .card-nosotros {
+    background-color: rgba(52, 58, 64, 0.9);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  
+  .card-nosotros h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffc107;
+    margin-bottom: 1rem;
+  }
+  
+  .card-nosotros h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-nosotros p {
+    font-size: 0.95rem;
+    color: #adb5bd;
+  }
+  
+  .card-nosotros .btn-outline-light {
+    border-color: #ffc107;
+    color: #ffc107;
+  }
+  
+  .card-nosotros .btn-outline-light:hover {
+    background-color: #ffc107;
+    color: #212529;
+  }
+  
+  .horarios li,
+  .contacto-rapido p {
+    margin-bottom: 0.5rem;
+    color: #adb5bd;
+  }
+  
+  /* Mensaje de éxito */
+  #mensajeExito {
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    .seccion-preguntas,
+    .seccion-nosotros {
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .titulo {
+      font-size: 2.5rem;
+    }
+  
+    .subtitulo {
+      font-size: 1.5rem;
+    }
+  
+    .preguntas-destacadas .col-md-4 {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .card-pregunta {
+      margin-bottom: 1rem;
+    }
+  
+    .botones-accion .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .botones-accion .btn-light {
+      margin-right: 0 !important;
+    }
+  }
+  

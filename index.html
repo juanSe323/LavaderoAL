@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/estilos.css">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/estilos.css">  
 <title>Lavadero AL - Oficial</title>
 </head>
 <body>
   
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
       <div class="container-fluid">
-        <a class="navbar-brand fw-bold text-warning" href="index.html"><img src="img/logoAL.png" alt="logo" class="logoAL">Lavadero AL</a>
+        <a class="navbar-brand fw-bold text-warning" href="index.html"><img src="img/cocheAL.png" alt="logo" class="logoAL">Lavadero AL</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,92 +32,144 @@
   
     <div class="container-fluid mt-1">
       <div class="row">
-        <!-- Contenido Principal -->
-        <div class="col-md-9 bg-warning">
-          <section class="contenido">
-            <h1 class="titulo text-dark fw-bold mt-2 text-center">LAVADERO AL</h1>
-            <p class="eslogan text-dark text-center">¡El mejor servicio que tu vehículo puede recibir!</p>
-            
-            <div class="botones text-center">
-              <button type="button" class="btn btn-light btn-lg m-2">Servicios</button>
-              <button type="button" class="btn btn-light btn-lg m-2">Conócenos</button>
-              <button type="button" class="btn btn-light btn-lg m-2">Más Información</button>
-            </div>
-  
-            <section class="text-center my-5">
-              <h2 class="text-dark">¿Por qué elegir Lavadero AL?</h2>
-              <p class="lead">Porque cuidamos tu vehículo como si fuera nuestro.</p>
-  
-              <div class="row mt-4">
-                <div class="col-md-3">
-                  <div class="card shadow-sm mt-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Rapidez</h5>
-                      <p class="card-text">Servicio ágil sin sacrificar calidad.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card shadow-sm mt-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Productos Premium</h5>
-                      <p class="card-text">Solo usamos productos de alta calidad.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card shadow-sm mt-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Atención Personalizada</h5>
-                      <p class="card-text">Cada cliente recibe un trato único y amable.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card shadow-sm mt-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Garantía de Satisfacción</h5>
-                      <p class="card-text">Tu vehículo sale como nuevo, o lo lavamos otra vez.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-  
-          </section>
+       <!-- Contenido Principal -->
+<div class="bg-warning pt-5">
+  <section class="contenido">
+
+    <!-- Título y eslogan -->
+    <h1 class="titulo text-dark fw-bold mt-3 text-center">LAVADERO AL</h1>
+    <p class="eslogan text-dark text-center">¡El mejor servicio que tu vehículo puede recibir!</p>
+
+    <!-- Botones con desplegables -->
+    <div class="botones text-center mt-4">
+      <button class="btn-inicio btn-dark text-light btn-lg m-2" type="button" data-bs-toggle="collapse" data-bs-target="#infoServicios">
+        Servicios
+      </button>
+      <button class="btn-inicio btn-dark text-light btn-lg m-2" type="button" data-bs-toggle="collapse" data-bs-target="#infoConocenos">
+        Conócenos
+      </button>
+      <button class="btn-inicio btn-dark text-light btn-lg m-2" type="button" data-bs-toggle="collapse" data-bs-target="#infoMas">
+        Más Información
+      </button>
+    </div>
+
+    <!-- Secciones desplegables -->
+    <div class="container mt-3">
+      <div class="collapse" id="infoServicios">
+        <div class="card-inicio card-body text-dark shadow-sm border-0 bg-light">
+          Ofrecemos servicios como lavado exterior, interior, encerado, y más. ¡Conócelos todos!
+          <a href="html/servicios.html" class="btn btn-warning btn-sm mt-2">Ir a Servicios</a>
         </div>
-  
-        <!-- Barra Lateral -->
-        <aside class="col-md-3 bg-light p-4 border-start">
-          <h5 class="text-dark mb-4">Información Rápida</h5>
-  
-          <div class="mb-3">
-            <h6 class="fw-bold">Horarios</h6>
-            <p class="mb-1">Lunes a Sábado:</p>
-            <p>7:30 AM - 6:00 PM</p>
-            <p class="mb-1">Domingos:</p>
-            <p>7:30 AM - 5:00 PM</p>
-          </div>
-  
-          <div class="mb-3">
-            <h6 class="fw-bold">Ubicación</h6>
-            <p>Calle 123 #45-67, Ciudad.</p>
-          </div>
-        </aside>
+      </div>
+      <div class="collapse" id="infoConocenos">
+        <div class="card-inicio card-body text-dark shadow-sm border-0 bg-light">
+          Somos una empresa comprometida con la calidad y la satisfacción del cliente.
+          <a href="html/preguntas.html" class="btn btn-warning btn-sm mt-2">Ir a Conócenos</a>
+        </div>
+      </div>
+      <div class="collapse" id="infoMas">
+        <div class="card-inicio card-body text-dark shadow-sm border-0 bg-light">
+          Si deseas contactarnos o saber dónde encontrarnos, te invitamos a explorar más.
+          <a href="html/contacto.html" class="btn btn-warning btn-sm mt-2">Ir a Contacto</a>
+        </div>
       </div>
     </div>
 
-    <footer class="bg-dark text-light mt-1">
-      <div class="container text-center">
-        <p class="mb-1">© 2025 Lavadero AL. Todos los derechos reservados.</p>
-        <p class="mb-0">
-          <a href="#" class="text-warning text-decoration-none">Política de privacidad</a> |
-          <a href="#" class="text-warning text-decoration-none">Términos de uso</a>
-        </p>
+    <!-- Sección Acerca del Lavadero -->
+    <section class="container my-5">
+      <h2 class="text-center text-dark mb-3">¿Quiénes somos?</h2>
+      <p class="text-center text-dark">
+        Lavadero AL es un centro de lavado especializado que se dedica a brindar un servicio rápido, eficiente y de calidad.
+        Contamos con personal capacitado, productos premium y una atención personalizada para garantizar que tu vehículo
+        siempre luzca como nuevo.
+      </p>
+    </section>
+
+    <!-- Sección de características -->
+    <section class="text-center my-5">
+      <h2 class="text-dark">¿Por qué elegir Lavadero AL?</h2>
+      <p class="lead">Porque cuidamos tu vehículo como si fuera nuestro.</p>
+
+      <div class="row mt-4 justify-content-center">
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Rapidez</h5>
+              <p class="card-text">Servicio ágil sin sacrificar calidad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Productos Premium</h5>
+              <p class="card-text">Solo usamos productos de alta calidad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Atención Personalizada</h5>
+              <p class="card-text">Cada cliente recibe un trato único y amable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title">Garantía de Satisfacción</h5>
+              <p class="card-text">Tu vehículo sale como nuevo, o lo lavamos otra vez.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
+
+  </section>
+</div>
+
+
+   <footer class="bg-dark text-light pt-4 pb-3 mt-1">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-3">
+        <h5 class="text-warning">Lavadero AL</h5>
+        <p class="small">Tu vehículo en manos expertas. Calidad, rapidez y atención garantizadas.</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="text-warning">Enlaces</h6>
+        <ul class="list-unstyled">
+          <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+          <li><a href="../html/servicios.html" class="text-light text-decoration-none">Servicios</a></li>
+          <li><a href="../html/galeria.html" class="text-light text-decoration-none">Galería</a></li>
+          <li><a href="../html/contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="text-warning">Redes Sociales</h6>
+        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-2"><i class="bi bi-whatsapp"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <p class="mb-1">© 2025 Lavadero AL. Todos los derechos reservados.</p>
+      <p class="mb-0">
+        <a href="#" class="text-warning text-decoration-none">Política de privacidad</a> |
+        <a href="#" class="text-warning text-decoration-none">Términos de uso</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
     
   </div>
-  
+  </div>
+  </div>
 </body>
 </html>
