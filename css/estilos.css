@@ -227,6 +227,14 @@ justify-content: center;
     margin-right: 1rem;
   }
 
+   .botones button {
+    width: 100%;
+  }
+  .card-inicio {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
   #calculadora-servicio h3 {
     font-size: 1.5rem;
   }

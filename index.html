@@ -12,7 +12,7 @@
 <body>
   
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1f1f1f; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold text-warning" href="index.html"><img src="img/cocheAL.png" alt="logo" class="logoAL">Lavadero AL</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDW">
@@ -41,33 +41,34 @@
     <p class="eslogan text-dark text-center">¡El mejor servicio que tu vehículo puede recibir!</p>
 
     <!-- Botones con desplegables -->
-    <div class="botones text-center mt-4">
-      <button class="btn-inicio btn-dark text-light btn-lg m-2" type="button" data-bs-toggle="collapse" data-bs-target="#infoServicios">
-        Servicios
-      </button>
-      <button class="btn-inicio btn-dark text-light btn-lg m-2" type="button" data-bs-toggle="collapse" data-bs-target="#infoConocenos">
-        Conócenos
-      </button>
-      <button class="btn-inicio btn-dark text-light btn-lg m-2" type="button" data-bs-toggle="collapse" data-bs-target="#infoMas">
-        Más Información
-      </button>
-    </div>
+<div class="botones d-grid gap-2 d-md-flex justify-content-center mt-4 px-2">
+  <button class="btn-inicio btn-dark text-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#infoServicios">
+    Servicios
+  </button>
+  <button class="btn-inicio btn-dark text-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#infoConocenos">
+    Conócenos
+  </button>
+  <button class="btn-inicio btn-dark text-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#infoMas">
+    Más Información
+  </button>
+</div>
+
 
     <!-- Secciones desplegables -->
     <div class="container mt-3">
-      <div class="collapse" id="infoServicios">
+      <div class="collapse p-1" id="infoServicios">
         <div class="card-inicio card-body text-dark shadow-sm border-0 bg-light">
           Ofrecemos servicios como lavado exterior, interior, encerado, y más. ¡Conócelos todos!
           <a href="html/servicios.html" class="btn btn-warning btn-sm mt-2">Ir a Servicios</a>
         </div>
       </div>
-      <div class="collapse" id="infoConocenos">
+      <div class="collapse p-1" id="infoConocenos">
         <div class="card-inicio card-body text-dark shadow-sm border-0 bg-light">
           Somos una empresa comprometida con la calidad y la satisfacción del cliente.
           <a href="html/preguntas.html" class="btn btn-warning btn-sm mt-2">Ir a Conócenos</a>
         </div>
       </div>
-      <div class="collapse" id="infoMas">
+      <div class="collapse p-1" id="infoMas">
         <div class="card-inicio card-body text-dark shadow-sm border-0 bg-light">
           Si deseas contactarnos o saber dónde encontrarnos, te invitamos a explorar más.
           <a href="html/contacto.html" class="btn btn-warning btn-sm mt-2">Ir a Contacto</a>
@@ -91,15 +92,15 @@
       <p class="lead">Porque cuidamos tu vehículo como si fuera nuestro.</p>
 
       <div class="row mt-4 justify-content-center">
-        <div class="col-md-3">
-          <div class="card shadow-sm border-0">
+        <div class="col-md-3 pb-3">
+          <div class="card shadow-sm pb-3 border-0">
             <div class="card-body">
               <h5 class="card-title">Rapidez</h5>
               <p class="card-text">Servicio ágil sin sacrificar calidad.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 pb-3">
           <div class="card shadow-sm border-0">
             <div class="card-body">
               <h5 class="card-title">Productos Premium</h5>
@@ -107,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 pb-3">
           <div class="card shadow-sm border-0">
             <div class="card-body">
               <h5 class="card-title">Atención Personalizada</h5>
@@ -115,7 +116,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 pb-3">
           <div class="card shadow-sm border-0">
             <div class="card-body">
               <h5 class="card-title">Garantía de Satisfacción</h5>
@@ -133,12 +134,19 @@
    <footer class="bg-dark text-light pt-4 pb-3 mt-1">
   <div class="container">
     <div class="row text-center text-md-start">
-      <div class="col-md-4 mb-3">
-        <h5 class="text-warning">Lavadero AL</h5>
+      <div class="col-md-3 mb-3">
+        <h6 class="text-warning">Lavadero AL</h6>
         <p class="small">Tu vehículo en manos expertas. Calidad, rapidez y atención garantizadas.</p>
       </div>
 
-      <div class="col-md-4 mb-3">
+      <div class="col-md-3 mb-3">
+        <h6 class="text-warning">Contacto</h6>
+        <p class="small mb-1"><i class="bi bi-geo-alt-fill me-1"></i> Sahagun, Colombia</p>
+        <p class="small mb-1"><i class="bi bi-telephone-fill me-1"></i> +57 300 ### ####</p>
+        <p class="small"><i class="bi bi-envelope-fill me-1"></i> contacto@lavaderoal.com</p>
+      </div>
+
+      <div class="col-md-3 mb-3">
         <h6 class="text-warning">Enlaces</h6>
         <ul class="list-unstyled">
           <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
@@ -148,12 +156,20 @@
         </ul>
       </div>
 
-      <div class="col-md-4 mb-3">
+      <div class="col-md-3 mb-3">
         <h6 class="text-warning">Redes Sociales</h6>
-        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="text-light me-2"><i class="bi bi-whatsapp"></i></a>
-        <a href="#" class="text-light"><i class="bi bi-envelope-fill"></i></a>
+        <a href="https://facebook.com" target="_blank" class="text-light me-2" rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="text-light me-2" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://wa.me/573001234567" target="_blank" class="text-light me-2" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="mailto:jmontesperez15@correo.unicordoba.edu.co" class="text-light">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
       </div>
     </div>
 
@@ -166,7 +182,6 @@
     </div>
   </div>
 </footer>
-
     
   </div>
   </div>
