@@ -11,17 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const reseñasPorDefecto = [
   {
-    nombre: "María G.",
+    nombre: "María Gímenes.",
     calificacion: 5,
     mensaje: "Excelente servicio, muy rápido y amable."
   },
   {
-    nombre: "Carlos P.",
+    nombre: "Carlos Pérez.",
     calificacion: 4,
     mensaje: "Todo bien, aunque podría mejorar el lavado interior."
   },
   {
-    nombre: "Ana L.",
+    nombre: "Ana Lopez.",
     calificacion: 5,
     mensaje: "Mi carro quedó como nuevo, súper recomendados."
   }

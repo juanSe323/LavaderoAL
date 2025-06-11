@@ -1,5 +1,4 @@
-// Inicializar EmailJS (asegúrate que este script se carga después del body)
-emailjs.init("_0gz9ldVqTOWe49Rn"); // Reemplaza con tu clave pública
+emailjs.init("_0gz9ldVqTOWe49Rn"); 
 
 function limpiarBackdrop() {
   const backdrops = document.querySelectorAll('.modal-backdrop');
