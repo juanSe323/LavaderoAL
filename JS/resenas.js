@@ -11,19 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const reseñasPorDefecto = [
   {
-    nombre: "María Gímenes.",
-    calificacion: 5,
-    mensaje: "Excelente servicio, muy rápido y amable."
+    nombre: "María",
+    apellido: "Gímenes",
+    estrellas: 5,
+    descripcion: "Excelente servicio, mi auto quedó impecable.",
+    sugerencias: "Podrían ofrecer un servicio de recogida y entrega.",
+    fecha: "01/10/2023"  
   },
   {
-    nombre: "Carlos Pérez.",
-    calificacion: 4,
-    mensaje: "Todo bien, aunque podría mejorar el lavado interior."
+    nombre: "Carlos",
+    apellido: "Prez",
+    estrellas: 5,
+    descripcion: "Excelente servicio, mi moto quedó impecable.",
+    sugerencias: "Ninguna por el momento",
+    fecha: "01/9/2023"  
   },
   {
-    nombre: "Ana Lopez.",
-    calificacion: 5,
-    mensaje: "Mi carro quedó como nuevo, súper recomendados."
+    nombre: "Ana",
+    apellido: "Lopez",
+    estrellas: 5,
+    descripcion: "Mi carro quedó como nuevo, súper recomendados.",
+    sugerencias: " ",
+    fecha: "01/11/2023"
   }
 ];
 
