@@ -149,15 +149,8 @@ body {
     }
   }
   
-  #bloque-compromiso{
-    display: none !important;
-  }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-  #bloque-compromiso {
-    display: block !important;
-    font-size: 1rem;
-  }
 
   .lista-contacto {
     font-size: 0.9rem; 

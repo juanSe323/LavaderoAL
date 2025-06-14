@@ -28,15 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const ocultarFormBtn = document.getElementById('ocultarFormulario');
   const seccionFormulario = document.getElementById('seccion-formulario');
 
-  const bloqueCompromiso = document.getElementById('bloque-compromiso');
-
-  // ===============================
-  // Función para detectar si es tablet
-  // ===============================
-  function esTablet() {
-    return window.innerWidth >= 768 && window.innerWidth < 992;
-  }
-
   // ===============================
   // Botones Mostrar/Ocultar Mapa
   // ===============================
@@ -45,18 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
       seccionFormulario.style.display = 'none';
       seccionMapa.style.display = 'block';
 
-      if (bloqueCompromiso && esTablet()) bloqueCompromiso.style.display = 'none';
-
       if (!mapa) initializeMap();
       seccionMapa.scrollIntoView({ behavior: 'smooth' });
     });
 
     ocultarMapaBtn.addEventListener('click', () => {
       seccionMapa.style.display = 'none';
-
-      if (bloqueCompromiso && seccionFormulario.style.display === 'none' && esTablet()) {
-        bloqueCompromiso.style.display = 'block';
-      }
     });
   }
 
@@ -68,17 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
       seccionMapa.style.display = 'none';
       seccionFormulario.style.display = 'block';
 
-      if (bloqueCompromiso && esTablet()) bloqueCompromiso.style.display = 'none';
-
       seccionFormulario.scrollIntoView({ behavior: 'smooth' });
     });
 
     ocultarFormBtn.addEventListener('click', () => {
       seccionFormulario.style.display = 'none';
-
-      if (bloqueCompromiso && seccionMapa.style.display === 'none' && esTablet()) {
-        bloqueCompromiso.style.display = 'block';
-      }
     });
   }
 
@@ -163,4 +142,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
