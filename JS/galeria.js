@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener('click', function (event) {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const isClickInside = navbarCollapse.contains(event.target);
+    const isNavbarToggler = event.target.closest('.navbar-toggler');
+
+    // Si el menú está abierto, el clic NO es en el menú ni en el toggler → cerrarlo
+    if (navbarCollapse.classList.contains('show') && !isClickInside && !isNavbarToggler) {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    }
+  });
     // Inicializar los sliders de antes/después
     const sliders = document.querySelectorAll(".slider-handle")
   

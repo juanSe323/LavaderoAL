@@ -101,7 +101,7 @@ function mostrarServicios(tipo) {
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-warning fw-bold">${servicio.titulo}</h5>
           <p class="card-text text-light">${servicio.descripcion}</p>
-          <p class="card-text"><strong>Precio: ${servicio.precio}</strong></p>
+          <p class="card-text text-light"><strong>Precio: ${servicio.precio}</strong></p>
           <button onclick="abrirModalConServicio('${servicio.titulo}', '${tipo}')" class="btn btn-warning mt-auto">Seleccionar</button>
         </div>
       </div>
@@ -195,3 +195,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Asignar evento para cambio de cantidad
   document.getElementById("cantidad").addEventListener("input", actualizarPrecio)
 })
+  document.addEventListener('click', function (event) {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const isClickInside = navbarCollapse.contains(event.target);
+    const isNavbarToggler = event.target.closest('.navbar-toggler');
+
+    // Si el menú está abierto, el clic NO es en el menú ni en el toggler → cerrarlo
+    if (navbarCollapse.classList.contains('show') && !isClickInside && !isNavbarToggler) {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    }
+  });

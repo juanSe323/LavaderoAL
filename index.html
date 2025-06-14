@@ -93,34 +93,34 @@
 
       <div class="row mt-4 justify-content-center">
         <div class="col-md-3 pb-3">
-          <div class="card shadow-sm pb-3 border-0">
-            <div class="card-body">
-              <h5 class="card-title">Rapidez</h5>
-              <p class="card-text">Servicio ágil sin sacrificar calidad.</p>
+          <div class="cardi shadow-sm pb-3 border-0">
+            <div class="cardi-body">
+              <h5 class="cardi-title">Rapidez</h5>
+              <p class="cardi-text">Servicio ágil sin sacrificar calidad.</p>
             </div>
           </div>
         </div>
         <div class="col-md-3 pb-3">
-          <div class="card shadow-sm border-0">
-            <div class="card-body">
-              <h5 class="card-title">Productos Premium</h5>
-              <p class="card-text">Solo usamos productos de alta calidad.</p>
+          <div class="cardi shadow-sm border-0">
+            <div class="cardi-body">
+              <h5 class="cardi-title">Productos Premium</h5>
+              <p class="cardi-text">Solo usamos productos de alta calidad.</p>
             </div>
           </div>
         </div>
         <div class="col-md-3 pb-3">
-          <div class="card shadow-sm border-0">
-            <div class="card-body">
-              <h5 class="card-title">Atención Personalizada</h5>
-              <p class="card-text">Cada cliente recibe un trato único y amable.</p>
+          <div class="cardi shadow-sm border-0">
+            <div class="cardi-body">
+              <h5 class="cardi-title">Atención Personalizada</h5>
+              <p class="cardi-text">Cada cliente recibe un trato único y amable.</p>
             </div>
           </div>
         </div>
         <div class="col-md-3 pb-3">
-          <div class="card shadow-sm border-0">
-            <div class="card-body">
-              <h5 class="card-title">Garantía de Satisfacción</h5>
-              <p class="card-text">Tu vehículo sale como nuevo, o lo lavamos otra vez.</p>
+          <div class="cardi shadow-sm border-0">
+            <div class="cardi-body">
+              <h5 class="cardi-title">Garantía de Satisfacción</h5>
+              <p class="cardi-text">Tu vehículo sale como nuevo, o lo lavamos otra vez.</p>
             </div>
           </div>
         </div>
@@ -186,5 +186,20 @@
   </div>
   </div>
   </div>
+ <script>
+    document.addEventListener('click', function (event) {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const isClickInside = navbarCollapse.contains(event.target);
+    const isNavbarToggler = event.target.closest('.navbar-toggler');
+
+    // Si el menú está abierto, el clic NO es en el menú ni en el toggler → cerrarlo
+    if (navbarCollapse.classList.contains('show') && !isClickInside && !isNavbarToggler) {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    }
+  });
+ </script>
 </body>
 </html>
