@@ -1,33 +1,9 @@
 /* Estilos para la página de galería */
 body {
-    background-color: black !important;
+    background-color: #000000 !important;
   
   }
   
-  .pagina-galeria {
-    background-image: url(../img/fondo.jpg) !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: calc(100vh - 76px - 80px); /* Altura total menos navbar y footer */
-    padding: 2rem 0;
-  }
-  
-  /* Títulos */
-  .titulo {
-    font-size: 4rem;
-    font-weight: 800;
-    color: #ffc107;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .subtitulo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
   
   /* Filtros */
   .filtros-container {
@@ -45,7 +21,7 @@ body {
   
   .btn-filtro:hover,
   .btn-filtro.active {
-    background-color: #ffc107;
+    background-color:white;
     color: #212529;
   }
   
