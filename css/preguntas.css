@@ -290,3 +290,43 @@ body {
     }
   }
   
+  /* Botón WhatsApp flotante */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* Botón para ir arriba */
+.btn-ir-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  font-size: 26px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn-ir-arriba:hover {
+  transform: scale(1.1);
+  background-color: #000;
+}

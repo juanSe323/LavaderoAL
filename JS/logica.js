@@ -179,6 +179,8 @@ function actualizarPrecio() {
   }
 }
 
+
+
 // Inicializar los eventos cuando el DOM esté cargado
 document.addEventListener("DOMContentLoaded", () => {
   // Mostrar servicios de carro por defecto
@@ -208,3 +210,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  // Mostrar/ocultar botón de ir arriba
+const btnArriba = document.getElementById('btnArriba');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    btnArriba.style.display = 'block';
+  } else {
+    btnArriba.style.display = 'none';
+  }
+});
+
+// Funcionalidad del botón de ir arriba
+btnArriba.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
